@@ -1,0 +1,95 @@
+\documentclass[12pt, a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\title{Abiturvorbereitung Mathematik}
+\author{Simon Fredrich}
+\date{2020-2021}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+\begin{abstract}
+% Der Abstract ist eine kurze Beschreibung der Arbeit.
+In dieser Arbeit werde ich den Stoff der 12. und 13. Klasse des Bereiches Mathematik zusammenfassen und mit Beispielen ausführen. Es handelt sich um den Mathematik Leistungskurs.
+\end{abstract}
+
+\chapter{Integralrechnung}
+
+\section{Hauptsatz der Integral- und Differentialrechnung}
+Ist $f$ eine im $I[a;b]$ stetige Funktion und F eine zu $f$ gehörende Stammfunktion so gilt:\\
+\begin{equation}
+\int_{a}^{b} f(x) dx = F(b)-F(a)
+\end{equation}
+
+\subsection{Beispiel}
+
+\begin{equation}
+\int_{0}^{2} x^2 dx = \left[\frac{x^3}{3}\right]_0^2=\frac{2^3}{3}-\frac{0^3}{3}=\frac{8}{3}
+\end{equation}
+Mit $C=-2$:
+\begin{equation}
+\int_{0}^{2} x^2 dx = \left[\frac{x^3}{3}-2\right]_0^2=\left(\frac{2^3}{3}-2\right)-\left(\frac{0^3}{3}-2\right)=\frac{8}{3}
+\end{equation}
+
+\section{Regeln}
+Das Ermitteln unbestimmter Integrale.
+\subsection{Potenzregel}
+
+\subsection{Summenregel}
+\subsection{Faktorregel}
+\subsection{lineare Kettenregel/Substitution}
+
+\section{Die Integralfunktion}
+Dem bestimmten Integral kann bei Veränderung der oberen Integrationsgrenze b genau eine Zahl zugeordnet werden.
+\begin{equation}
+\int_0^b x^2 dx=\frac{b^3}{3}
+\end{equation}
+Dies ist das bestimmte Integral zur oberen Grenze b.
+
+
+\section{Stammfunktionen}
+Eine differenzierbare Funktion F, für die gilt $F'(x)=f(x)$ heißt Stammfunktion von f. \\
+$\implies$ Integralfunktionen sind Stammfunktionen\\
+Die \emph{Menge} aller Stammfunktionen einer Funktion $f$ heißt \emph{unbestimmtes Integral} von $f$.\\
+
+\begin{equation}
+\begin{aligned}
+\int f(x) dx=F(x)+C \quad \textrm{and} \quad C\in \mathbb{R}
+\end{aligned}
+\end{equation}
+
+\subsection{Beispiele}
+\begin{enumerate}
+\item $f(x)=6x$\\
+$F_1(x)=3x^2$\\
+$F_2(x)=3x^2+4$\\
+$F_3(x)=3x^2-5$
+\item $f(x)=7$\\
+$F_1(x)=7x$\\
+$F_2(x)=7x+16$\\
+$F_3(x)=7x-3$
+\end{enumerate}
+
+\subsection{Satz}
+$F_1$ und $F_2$ sind Stammfunktionen von $f$, dann ist $F_1-F_2$ eine konstante Funktion. Das heißt $F_1$ und $F_2$ unterscheiden sich nur um eine additive Konstante.
+
+\subsection{Beweis}
+$F_1$ und $F_2$ sind Stammfunktionen von $f$.\\
+$\implies F_1' = f$ und $F_2' = f$\\
+$\implies F_1'-F_2' = 0$\\
+$\implies (F_1-F_2)' = 0$\\
+Eine Funktion, deren Ableitung null ist, ist eine Konstante.\\
+$\implies F_1-F_2 = C$
+
+
+
+
+\end{document}
