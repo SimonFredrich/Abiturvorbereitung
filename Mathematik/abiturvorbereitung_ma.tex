@@ -30,12 +30,12 @@ Ist $f$ eine im $I[a;b]$ stetige Funktion und F eine zu $f$ gehörende Stammfunk
 \int_{a}^{b} f(x) dx = F(b)-F(a)
 \end{equation}
 
-\subsection{Beispiel}
+\subsection{Beispiele}
 
 \begin{equation}
 \int_{0}^{2} x^2 dx = \left[\frac{x^3}{3}\right]_0^2=\frac{2^3}{3}-\frac{0^3}{3}=\frac{8}{3}
 \end{equation}
-Mit $C=-2$:
+Mit $C=-2$ kämen wir auf das gleiche Ergebnis:
 \begin{equation}
 \int_{0}^{2} x^2 dx = \left[\frac{x^3}{3}-2\right]_0^2=\left(\frac{2^3}{3}-2\right)-\left(\frac{0^3}{3}-2\right)=\frac{8}{3}
 \end{equation}
@@ -72,8 +72,126 @@ Das Ermitteln unbestimmter Integrale.
 \end{fleqn}
 
 \subsection{Summenregel}
+
+Man kann eine Summe gliedweise integrieren.
+\begin{equation}
+\int (f(x)+g(x)) dx = \int f(x)dx+\int g(x)dx=F(x)+G(x)
+\end{equation}
+
+\subsubsection{Beispiele}
+
+\begin{fleqn}[\parindent]
+\begin{multline}
+\int (x^3 + 2x^{10}-80x^2)dx\\=
+\int x^3dx + \int 2x^{10}dx - \int 80x^2dx = \frac{1}{4}x^4 + \frac{2}{11}x^{11} - \frac{80}{3}x^3 + C
+\end{multline}
+\begin{multline}
+\int (\sqrt{x} + \sqrt[3]{x}) dx = \int (x^{\frac{1}{2}}+x^{\frac{1}{3}}) dx =\int x^{\frac{1}{2}}+\int x^{\frac{1}{3}} dx\\ =
+\frac{2}{3}x^{\frac{3}{2}} + \frac{3}{4}x^{\frac{4}{3}} + C = \frac{2}{3}\sqrt{x}^3 + \frac{3}{4}\sqrt{x}^4 +C
+\end{multline}
+\end{fleqn}
+
 \subsection{Faktorregel}
+Ein konstanter Faktor bleibt beim Integrieren erhalten.
+
+\begin{equation}
+\int a\cdot f(x)dx = a\cdot \int f(x)dx \quad \land \quad (a \in \mathbb{R})
+\end{equation}
+
+\subsubsection{Beispiele}
+\begin{fleqn}[\parindent]
+\begin{enumerate}
+\item
+\begin{align*}
+\int 14x^8dx = 14\int x^8dx = 14\cdot \frac{1}{9}x^9 + C
+\end{align*}
+
+\item
+\begin{align*}
+\int (14x^8 + 5x^9)dx = 14\cdot \int x^8dx + 5\cdot \int x^9 = 14\cdot \frac{1}{9}x^9 + 5\cdot \frac{1}{10}x^{10} + C\\
+= \frac{14}{9}x^9 + \frac{1}{2}x^{10} + C
+\end{align*}
+\end{enumerate}
+\end{fleqn}
+
 \subsection{lineare Kettenregel/Substitution}
+Für $a, b \in \mathbb{R}, a \neq 0$ gilt:
+\begin{equation}
+\int f(ax+b)dx=\frac{1}{a}F(ax+b)
+\end{equation}
+
+\subsubsection{Beispiele}
+
+\begin{fleqn}[\parindent]
+\begin{enumerate}
+\item
+\begin{align*}
+\int (5x+1)^2dx = \frac{1}{5}\cdot \frac{1}{3} (5x+1)^3 = \frac{(5x+1)^3}{15} + C
+\end{align*}
+\item
+\begin{align*}
+\int (18x+144)^6dx = \frac{1}{18}\cdot \frac{1}{7} (5x+1)^7 = \frac{(18x+144)^7}{126} + C
+\end{align*}
+\end{enumerate}
+\end{fleqn}
+
+\subsection{Exponentielle Integration}
+Folgende Ableitungsregeln sind in diesem Zusammenhang wichtig:
+\begin{equation}
+({\rm e}^x)' = {\rm e}^x, \quad (a^x)' = \ln a \cdot a^x
+\end{equation}
+
+Es ergeben sich im Umkehrschluss folgende Regeln:
+
+\begin{equation}
+\int {\rm e}^xdx = {\rm e}^x + C
+\end{equation}
+\begin{equation}
+\int a^xdx = \frac{1}{\ln a} \cdot a^x + C
+\end{equation}
+
+\subsubsection{Beispiele}
+
+\begin{fleqn}[\parindent]
+\begin{enumerate}
+\item
+\begin{align*}
+\int {\rm e}^{-2x}dx = \frac{1}{-2}{\rm e}^{-2x} + C
+\end{align*}
+\item
+\begin{align*}
+\int \left(\frac{5}{2}{\rm e}^{-4x}\right)dx = \frac{5}{2}\cdot \frac{1}{-4} \cdot {\rm e}^{-4x} + C = -\frac{5}{8}{\rm e}^{-4x} + C
+\end{align*}
+\end{enumerate}
+\end{fleqn}
+
+\subsection{Trigonometrische Integration}
+Folgende Ableitungsregeln sind in diesem Zusammenhang wichtig:
+\begin{equation}
+(\sin x)' = \cos x, \quad (\cos x)' = -\sin x
+\end{equation}
+
+Daraus ergeben sich im Umkehrschluss folgende Regeln:
+\begin{equation}
+\int (\sin x)dx = -\cos x + C
+\end{equation}
+\begin{equation}
+\int (\cos x) dx = \sin x +C
+\end{equation}
+
+\subsubsection{Beispiele}
+\begin{fleqn}[\parindent]
+\begin{enumerate}
+\item
+\begin{align*}
+\int 4\sin(2x)dx = -4\cdot \frac{1}{2} \cdot \cos(2x) + C =-2 \cdot \cos(2x) + C
+\end{align*}
+\item
+\begin{align*}
+\int 4\cos(2x)dx = 4\cdot \frac{1}{2} \cdot \sin(2x) + C =2 \cdot \sin(2x) + C
+\end{align*}
+\end{enumerate}
+\end{fleqn}
 
 \section{Die Integralfunktion}
 Dem bestimmten Integral kann bei Veränderung der oberen Integrationsgrenze b genau eine Zahl zugeordnet werden.
