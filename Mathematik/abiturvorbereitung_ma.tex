@@ -6,6 +6,7 @@
 \usepackage{geometry}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{xcolor}
 
 \title{Abiturvorbereitung Mathematik}
 \author{Simon Fredrich}
@@ -21,6 +22,74 @@
 % Der Abstract ist eine kurze Beschreibung der Arbeit.
 In dieser Arbeit werde ich den Stoff der 12. und 13. Klasse des Bereiches Mathematik zusammenfassen und mit Beispielen ausführen. Es handelt sich um den Mathematik Leistungskurs.
 \end{abstract}
+
+\chapter{Gebrochen-rationale Funktionen}
+
+\section{Polstellen und Asymptoten}
+Eine Funktion $f$ mit $f(x)=\frac{Z(x)}{N(x)}$ bei der $Z$ und $N$ Polynome sind und $N(x)\neq 0$ ist, heißt \textit{rationale} Funktion. Die maximale Definitionsmenge ist $\mathbb{D}_f = \mathbb{R} \textbackslash \{x|N(x) = 0\}$.
+
+$f$ ist \textit{ganzrational}, wenn $f$ auf $\mathbb{D}_f$ als Polynom darstellbar ist $\left(f(x)=\frac{g(x)}{1}\right)$. Anschaulich heißt das, dass der Graph von $f$ nur Löcher im Funktionsgraphen hat. $f$ ist jedoch \textit{gebrochen-rational}, wenn:
+\begin{enumerate}
+\item
+$\text{Grad von } Z(x) < \text{Grad von } N(x) \implies \textit{echt }\text{gebrochen-rational}$
+\item
+$\text{Grad von } Z(x) > \text{Grad von } N(x) \implies \textit{unecht }\text{gebrochen-rational}$
+\end{enumerate}
+
+In beiden Fällen lässt sich mir der Polynomdivision der ganzrationale und echt gebrochen-rationale Anteil feststellen.
+
+\section{Beispiele}
+
+\begin{fleqn}[\parindent]
+\begin{enumerate}
+\item
+\begin{align*}
+f(x)=\frac{x^3-x^2-26x-19}{x-5}
+\end{align*}
+\begin{align*}
+\mathbb{D}_f = \{x\in \mathbb{R}; x \neq 5\}
+\end{align*}
+\begin{align*}
+Z(5)=-49 \neq 0
+\end{align*}
+\begin{align*}
+N(5)=0
+\end{align*}
+$x=5$ ist keine Nullstelle des Zählerpolynoms, weshalb man den Linearfaktor $(x-5)$ im Zähler nicht abspalten kann. $f$ ist \textit{gebrochen-rational}. Zählergrad 3 > Nennergrad 1. Die Funktion ist also \textit{unecht} gebrochen.
+\begin{align*}
+(x^3-x^2-26x-19):(x-5)=\color{blue}x^2+4x-6\color{red}-\frac{49}{x-5}
+\end{align*}
+\textcolor{blue}{ganzrationaler Anteil}\\
+\textcolor{red}{echt gebrochen-rationaler Anteil}
+
+\item
+\begin{align*}
+f(x)=\frac{x^3+4x^2+x-6}{x+2}
+\end{align*}
+\begin{align*}
+\mathbb{D}_f = \mathbb{R}\{-2\}
+\end{align*}
+\begin{align*}
+Z(-2)=0
+\end{align*}
+\begin{align*}
+N(-2)=0
+\end{align*}
+Im Zähler kann der Linearfaktor $(x+2)$ abgespalten werden. $f$ ist demnach \textit{ganzrational}.
+\begin{align*}
+(x^3+4x^2+x-6):(x+2)=\color{blue}x^2+2x-3
+\end{align*}
+\textcolor{blue}{ganzrationaler Anteil}
+
+Das durch die Definitionslücke veruhrsachte Loch im Graphen von $f$ kann geschlossen werden.
+\begin{align*}
+f(x)=x^2+2x-3
+\end{align*}
+\end{enumerate}
+\end{fleqn}
+
+
+
 
 \chapter{Integralrechnung}
 
